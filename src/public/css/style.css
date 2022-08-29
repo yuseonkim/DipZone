@@ -1,0 +1,16 @@
+.loginBox{
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    height:200px;
+    background-color: rgb(83, 132, 237);
+    text-align:center;
+    color:aliceblue;
+  }
+  .loginBox__item{
+    display:table-cell;
+    vertical-align:middle;
+  }
+  body {
+    background-color: rgb(115, 126, 150);
+  }
