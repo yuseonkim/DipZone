@@ -2,6 +2,7 @@
 
 const id = document.querySelector("#id");
 const psword = document.querySelector("#psword");
+const name = document.querySelector("#name");
 const confirmPsword = document.querySelector("#confirm-psword");
 const email = document.querySelector("#email");
 const address = document.querySelector("#address");
@@ -9,14 +10,16 @@ const address = document.querySelector("#address");
 const registerBtn = document.querySelector("#button");
 registerBtn.addEventListener("click",register);
 function register(){
+    if(psword.value !== confirmPsword.value) {
+        return alert("비밀번호가 틀립니다");
+    }
     const req = {
         id : id.value,
+        name : name.value,
         psword : psword.value,
-        confirmPsword : confirmPsword.value,
         email : email.value,
         address : address.value,
     };
-    console.log(req);
     fetch("/register",{
         method : "POST",
         headers : {
@@ -26,7 +29,7 @@ function register(){
     })
     .then((res) => res.json())
     .then((res) => {
-        if( res.success){
+        if(res.success){
             location.href = "/login";
         }else{
             alert(res.msg);
