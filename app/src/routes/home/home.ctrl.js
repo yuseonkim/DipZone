@@ -8,8 +8,8 @@ const output = {
     login :  (req,res)=>{
         res.render("home/login");
     },
-    join : (req,res)=>{
-        res.render("home/join");
+    register : (req,res)=>{
+        res.render("home/register");
     }
 };
 
