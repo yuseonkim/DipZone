@@ -10,7 +10,13 @@ const output = {
     },
     register : (req,res)=>{
         res.render("home/register");
+    },
+    qr : (req,res)=>{
+        res.render("home/qr");
+
     }
+
+    
 };
 
 const process = {
