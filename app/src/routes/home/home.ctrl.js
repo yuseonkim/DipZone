@@ -1,7 +1,10 @@
 "use strict";
 
 const User = require("../../models/User");
+const db = require("../../config/db");
+
 const output = {
+
     home : (req,res) =>{
     res.render("home/index");
     },
@@ -13,8 +16,12 @@ const output = {
     },
     qr : (req,res)=>{
         res.render("home/qr");
-
-    }
+    },
+    admin : (req,res)=>{
+        db.query("Select * from users;", (err,rows)=>{ 
+        res.redirect("home/admin");
+    });
+}
 
     
 };

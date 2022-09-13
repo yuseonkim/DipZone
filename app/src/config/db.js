@@ -7,6 +7,7 @@ const db = mysql.createConnection({
     database:"samsso",
 });
 
+
 db.connect();
 
 module.exports = db;
