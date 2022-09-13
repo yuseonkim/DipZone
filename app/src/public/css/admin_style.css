@@ -1,0 +1,37 @@
+.name {
+    height : 100px;
+
+    text-align : center;
+
+  }
+body{
+  background-color : aliceblue;
+}
+ /* .container{
+  height:90vh;
+  width: 30vw;
+} */
+img { 
+ width : 10%;
+ height: 50%; 
+} 
+
+.request_register_semi {
+  border : 2.5px solid rgb(128, 181, 233);
+  border-radius: 10px;
+
+  height : 200px;
+
+  text-align : center;
+
+}
+.mange{
+  margin: 0px 160px 0px 160px;
+}
+.samsoo{
+  float:right;
+  height:90vh;
+  width: 30vw;
+  width : 50%;
+  height: 50%; 
+}

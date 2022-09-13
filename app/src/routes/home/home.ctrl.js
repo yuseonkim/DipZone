@@ -18,12 +18,8 @@ const output = {
         res.render("home/qr");
     },
     admin : (req,res)=>{
-        db.query("Select * from users;", (err,rows)=>{ 
-        res.redirect("home/admin");
-    });
-}
-
-    
+        res.render("home/admin");
+    },
 };
 
 const process = {
