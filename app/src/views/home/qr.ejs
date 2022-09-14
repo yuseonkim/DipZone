@@ -19,6 +19,89 @@
   <style>
     @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
 
+    .txt span {
+      position: relative;
+      display: inline-block;
+      color: rgb(83, 100, 211);
+      letter-spacing: -0.8px;
+      animation: txtup 1.5s infinite;
+      -webkit-animation: txtup 1.5s infinite;
+      -ms-animation: txtup 1.5s infinite;
+      -moz-animation: txtup 1.5s infinite;
+    }
+
+    .txt span:nth-of-type(1) {
+      animation-delay: 0.1s;
+    }
+
+    .txt span:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+
+    .txt span:nth-of-type(3) {
+      animation-delay: 0.3s;
+    }
+
+    .txt span:nth-of-type(4) {
+      animation-delay: 0.4s;
+    }
+
+    .txt span:nth-of-type(5) {
+      animation-delay: 0.4s;
+    }
+
+    @-webkit-keyframes txtup {
+      0% {
+        top: 0;
+      }
+
+      20% {
+        top: -0.2rem;
+      }
+
+      40% {
+        top: 0;
+      }
+
+      60% {
+        top: 0;
+      }
+
+      80% {
+        top: 0;
+      }
+
+      100% {
+        top: 0
+      }
+    }
+
+    @keyframes txtup {
+      0% {
+        top: 0;
+      }
+
+      20% {
+        top: -0.2rem;
+      }
+
+      40% {
+        top: 0
+      }
+
+      60% {
+        top: 0
+      }
+
+      80% {
+        top: 0
+      }
+
+      100% {
+        top: 0
+      }
+    }
+
     button {
 
       margin: 10px;
@@ -69,13 +152,19 @@
 
 
     <img class="mb-4" src="/img/이미지.png" alt="" width="200" height="190">
-    <h1 style="font-size: 15px">
-      <%=id%>님 어서오세요<br>
-      인증을 위해 QR코드 발급 버튼을 눌러주세요
+    <h1 class="txt" style="font-size: 15px">
+      <%=id%>님
+        <span>어</span>
+        <span>서</span>
+        <span>오</span>
+        <span>세</span>
+        <span>요</span>
+        <br>
+        인증을 위해 QR코드 발급 버튼을 눌러주세요
     </h1>
-    <button  type="button" onclick="location.href='login'" id="button">QR코드 발급</button>
+    <button type="button" onclick="location.href='login'" id="button">QR코드 발급</button>
 
-    
+
     <p class="mt-5 mb-1">&copy; 2022 SAMSSO</p>
 
 
