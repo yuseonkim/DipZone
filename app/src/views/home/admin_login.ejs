@@ -16,6 +16,10 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+       @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+       body{
+        font-family: 'Hanna', sans-serif;
+       }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -29,6 +33,7 @@
           font-size: 3.5rem;
         }
       }
+     
     </style>
 
     
@@ -39,7 +44,13 @@
   <body class="text-center">
     
 <main class="form-signin">
-    <img class="mb-4" src="/img/이미지.png" alt="" width="210" height="200">
+
+  <h1 style=" border: 2.5mm ridge #96aee8; font-size: 20px;">
+     SAMSSO 관리자 외 출입금지
+    
+  </h1>
+  
+   
    
 
     <div class="form-floating">
@@ -53,11 +64,12 @@
 
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" value="remember-me"> 로그인 상태 유지
+        <input type="checkbox" value="remember-me">로그인 상태 유지
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit" id="button">로그인</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" id="button">관리자 로그인</button>
     <p class="mt-5 mb-3 text-muted">&copy;samsso login</p>
+    
 </main>
 
 
