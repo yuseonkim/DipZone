@@ -1,12 +1,13 @@
 "use strict";
 
+const { name } = require("ejs");
+
 const id = document.querySelector("#id");
 const psword = document.querySelector("#psword");
 const name = document.querySelector("#name");
 const confirmPsword = document.querySelector("#confirm-psword");
 const email = document.querySelector("#email");
 const address = document.querySelector("#address");
-
 const registerBtn = document.querySelector("#button");
 registerBtn.addEventListener("click",register);
 function register(){
@@ -36,6 +37,8 @@ function register(){
         }
     })
     .catch.err(new Error("회원가입 중 에러 발생"));
+
+    
     
 };
 

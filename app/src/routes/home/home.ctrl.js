@@ -20,6 +20,9 @@ const output = {
     admin : (req,res)=>{
         res.render("home/admin");
     },
+    adminLogin : (req,res)=>{
+        res.render("home/admin_login")
+    },
 };
 
 const process = {
@@ -34,7 +37,12 @@ const process = {
         const response = await user.register();
         return res.json(response);
 
-    }
+    },
+    adminLogin : async (req,res) => {
+        const user = new User(req.body);
+        const response = await user.adminLogin();
+        return res.json(response);
+    },
 }
 
 

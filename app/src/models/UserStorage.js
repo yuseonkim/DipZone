@@ -29,6 +29,15 @@ class UserStorage{
         });
 }
 
+static getAdminInfo(id){
+    return new Promise((resolve, reject)=> {
+     const query = "select * from admin where id = ?";
+     db.query(query , [id], (err,data) => {
+         if (err) reject(`${err}`);
+         resolve(data[0]);
+     });
+     });
+}
     
     static async save(userInfo) {
         return new Promise((resolve, reject)=> {
