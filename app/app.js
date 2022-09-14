@@ -7,6 +7,7 @@ const home = require("./src/routes/home");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const bcrypt = require("bcrypt-nodejs");
+const qrcode = require('qrcode');
 //앱세팅
 app.set("views",'./src/views');
 app.set("view engine", "ejs"); //뷰엔진을 ejs로
@@ -17,6 +18,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use("/", home); //use -> 미들웨어 등록하는 메소드
 app.use('/process', express.static(__dirname + '/public')); //css 사용하려고 추가
+app.post('/scan',(req,res,next)=>{
+    const id = req.query.id;
+    qrcode.toDataURL(id,(err,src)=>{
+        res.render('home/scan',{
+            qr_code : src
+        })
+    })
+
+
+})
 
 
 

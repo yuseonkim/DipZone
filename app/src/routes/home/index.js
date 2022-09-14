@@ -3,6 +3,8 @@ const express =require ("express");
 const router = express.Router();
 const ctrl = require("./home.ctrl");
 const db = require("../../config/db");
+const UserStorage = require("../../models/UserStorage")
+const qrCode =require('qrcode');
 
 
 router.get("/",ctrl.output.home);

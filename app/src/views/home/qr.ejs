@@ -162,7 +162,9 @@
         <br>
         인증을 위해 QR코드 발급 버튼을 눌러주세요
     </h1>
-    <button type="button" onclick="location.href='login'" id="button">QR코드 발급</button>
+    <form action="/scan?id=<%=id%>" method="POST" class="form">
+    <button type="submit" id="button">QR코드 발급</button>
+  </form>
 
 
     <p class="mt-5 mb-1">&copy; 2022 SAMSSO</p>
