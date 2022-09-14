@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 const id = document.querySelector("#id");
 const psword = document.querySelector("#psword");
 const loginBtn = document.querySelector("#button");
@@ -22,7 +20,7 @@ function login(){
     .then((res) => res.json())
     .then((res) => {
         if(res.success){
-            location.href = "/qr";
+            location.href = "/qr?id="+id.value;
         }else{
             alert(res.msg);
         }

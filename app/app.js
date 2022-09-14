@@ -5,7 +5,8 @@ const app = express();
 //라우팅
 const home = require("./src/routes/home");
 const bodyParser = require("body-parser");
-
+const session = require("express-session");
+const bcrypt = require("bcrypt-nodejs");
 //앱세팅
 app.set("views",'./src/views');
 app.set("view engine", "ejs"); //뷰엔진을 ejs로

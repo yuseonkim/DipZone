@@ -15,7 +15,7 @@ const output = {
         res.render("home/register");
     },
     qr : (req,res)=>{
-        res.render("home/qr");
+        res.render("home/qr",{id : req.query.id});
     },
     admin : (req,res)=>{
         res.render("home/admin");

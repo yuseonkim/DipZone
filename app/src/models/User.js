@@ -14,7 +14,8 @@ class User {
         const user  = await UserStorage.getUserInfo(client.id);
         if (user) {
             if (user.id === client.id && user.psword === client.psword) {
-                return { success: true };
+                return { success: true,
+                client: client};
             }
             return { success: false, msg: "비밀번호가 틀렸습니다" };
         }
@@ -30,7 +31,8 @@ class User {
         const user  = await UserStorage.getAdminInfo(client.id);
         if (user) {
             if (user.id === client.id && user.psword === client.psword) {
-                return { success: true };
+                return { success: true
+                , client : client };
             }
             return { success: false, msg: "비밀번호가 틀렸습니다" };
         }
